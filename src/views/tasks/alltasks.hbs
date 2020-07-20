@@ -7,6 +7,9 @@
                         {{title}} <a href="/tasks/edit/{{_id}}"> <i class="fas fa-edit"></i></a>
                     </h4>
                     <p>{{description}}</p>
+
+                    <p>{{priority}}</p>
+                    <p>{{fecha_vencimiento}}</p>
                         <form action="/tasks/delete/{{_id}}?_method=DELETE" method="POST">
                         <input type="hidden" name="_method" value="DELETE">
                         <button class="btn btn-danger btn-block btn-sm" type="submit">

@@ -13,11 +13,21 @@
         <div class="form-group">
             <textarea name="description" class="form-control" placeholder="Descripción"></textarea>
         </div>
+         <div class="form-group">
+            <select name="priority" class="form-control"> 
+                <option value="" >Seleccione la prioridad</option>
+                <option value="high">Alta</option>
+                <option value="Medium">Media</option>
+                <option value="Low">Baja</option>
+            </select>
+       </div>
+        <div class="form-group">
+            <input type="Date" name="fecha_vencimiento" class="form-control">
+        </div>
         <div class="form-group">
             <button class="btn btn-primary btn-block" type="submit">
                 Guardar
-            </button>
-            
+            </button>  
         </div>
         </form>
     </div>
