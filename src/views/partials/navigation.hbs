@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/"><h4>Aplicación de Tareas</h4></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                {{#if user}}
+                    <div class="dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Tareas
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="/tasks">Listar Tareas</a>
+                            <a class="dropdown-item" href="/tasks/add">Agregar Tarea</a>
+                            <a class="dropdown-item" href="/users/logout">Salir</a>
+                        </div>
+                    </div>
+                    {{else}}
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/users/signin"> Iniciar Sesión <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/users/signup">Registrarse</a>
+                    </li>
+                {{/if}}   
+            </ul>
+        </div>
+    </div>
+</nav>

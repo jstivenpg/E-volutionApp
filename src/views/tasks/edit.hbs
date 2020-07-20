@@ -1,0 +1,27 @@
+<div class="col-md-4 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            <h3>Editar Tarea</h3>
+        </div>
+        <div class="card-body">
+            <form action="/tasks/edit/{{task._id}}?_method=PUT" method="POST">
+                <input type="hidden" name="_method" value="PUT">
+                <div class="form-group">
+                    <input type="text" name="title" class="form-control" placeholder="Título" value="{{task.title}}">
+                </div>
+                <div class="form-group">
+                    <textarea name="description" placeholder="Descripción" class="form-control">{{task.description}}
+                    </textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-sm btn-block" type="submit">
+                        Guardar
+                    </button>
+                    <button class="btn btn-danger btn-sm btn-block" type="button" onClick="history.back()" >
+                        Atrás
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
