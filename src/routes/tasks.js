@@ -42,7 +42,7 @@ router.post('/tasks/add', isAuthenticated, async(req, res) => {
 });
 
 router.get('/tasks', isAuthenticated, async(req, res) => {
-    const tasks = await Task.find({user: req.user.id}).lean().sort({date: 'desc'});
+    const tasks = await Task.find({user: req.user.id}).lean().sort({fecha_vencimiento: 'asc'});
     res.render('tasks/alltasks', { tasks });
 });
 

@@ -1,5 +1,4 @@
 
-
 <div class="col-md-4 mx-auto">
     <div class="card">
     <div class="card-header">
@@ -16,13 +15,13 @@
          <div class="form-group">
             <select name="priority" class="form-control"> 
                 <option value="" >Seleccione la prioridad</option>
-                <option value="high">Alta</option>
-                <option value="Medium">Media</option>
-                <option value="Low">Baja</option>
+                <option value="Alta">Alta</option>
+                <option value="Media">Media</option>
+                <option value="Baja">Baja</option>
             </select>
        </div>
         <div class="form-group">
-            <input type="Date" name="fecha_vencimiento" class="form-control">
+            <input type="Date" name="fecha_vencimiento" onchange="obtenerFecha(this)" class="form-control">
         </div>
         <div class="form-group">
             <button class="btn btn-primary btn-block" type="submit">
